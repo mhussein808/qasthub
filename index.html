@@ -180,7 +180,34 @@ footer {
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	createChat({
-		webhookUrl: 'https://qastea.app.n8n.cloud/webhook/ad9e70ec-4213-45bc-ac13-e7b3b6d38b96/chat'
+		webhookUrl: 'https://qastea.app.n8n.cloud/webhook/ad9e70ec-4213-45bc-ac13-e7b3b6d38b96/chat',
+		webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Welcome to Qast Chat Bot !',
+		'Ask me any question about QAST'
+	],
+	i18n: {
+		en: {
+			title: 'QAST Chat Bot',
+			subtitle: "here to help you 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'tell me',
+		},
+	},
+	enableStreaming: false,
+});
 	});
 </script>
 </html>
